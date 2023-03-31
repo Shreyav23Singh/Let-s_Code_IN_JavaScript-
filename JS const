@@ -1,0 +1,41 @@
+++> The const keyword was introduced in ES6 (2015).
+
+Variables defined with const cannot be Redeclared.
+
+Variables defined with const cannot be Reassigned.
+
+Variables defined with const have Block Scope.
+-----------------------------------------------****************************----------------------------------------------
+
+==> When to use JavaScript const?
+Always declare a variable with const when you know that the value should not be changed.
+
+Use const when you declare:
+
+** A new Array
+** A new Object
+** A new Function
+** A new RegExp
+____________________________________________**********************************________________________________________
+
++==> Constant Objects and Arrays
+The keyword const is a little misleading.
+
+It does not define a constant value. It defines a constant reference to a value.
+
+Because of this you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+But you CAN:
+
+Change the elements of constant array
+Change the properties of constant object
+
+
+== Example ==
+const favcars=["Audi" , "BMW" , "Mercedes" , "Fortuner" ];
+favcars[0] ="Range rover" ; // we can change an element
+favcars.push("Ferrari"); //here we can add elements
+console.log(favcars)
