@@ -39,3 +39,23 @@ const favcars=["Audi" , "BMW" , "Mercedes" , "Fortuner" ];
 favcars[0] ="Range rover" ; // we can change an element
 favcars.push("Ferrari"); //here we can add elements
 console.log(favcars)
+-------------------------------------------------------------******************------------------------------------
+Constant Objects
+You can change the properties of a constant object:
+
+const success ={
+    Input1 : "Hard Work",
+    input2: "Persistence",
+    Input3 : "consistency",
+    Input4: "Lazziness"
+    
+    
+};
+
+success.Input4 = "Patience"
+success.future = "Shreya";
+console.log(success);
+
+------------------------****************************-----------------------------------------
+Block Scope
+Declaring a variable with const is similar to let when it comes to Block Scope.
