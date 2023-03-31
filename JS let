@@ -58,3 +58,18 @@ console.log(x)
 Output
 22
 45
+
+**  Redeclaring Variables in the same blocks: We cannot redeclare variables using the let keyword inside the same blocks. It will throw an error. **
+
+Example: In this example, variable x is redeclared inside same blocks.]
+let x=22;
+{
+  let x=45; // legal
+  console.log(x)
+}
+let x=77 //illegal
+console.log(x)
+
+o/p
+
+SyntaxError: Identifier 'x' has already been declared
