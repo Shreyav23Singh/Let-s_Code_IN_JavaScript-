@@ -1,0 +1,23 @@
+** 4 Ways to Declare a JavaScript Variable:
+1. Using var
+2. Using let
+3. Using const
+4. Using nothing
+
+==> var - add two numbers
+var x=5;
+var y=10;
+var z=x+y;
+console.log("The value of z is " +z);
+
+==>// Example of let variable
+let firstname ="Shreya";
+let lastname ="Singh";
+let fullname = firstname + " " + lastname;
+console.log(fullname);
+
+// Example of const variable
+const x =10;
+const y  =12;
+let total =x+y;
+console.log(total);
