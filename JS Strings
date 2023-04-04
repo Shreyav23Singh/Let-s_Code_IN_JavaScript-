@@ -1,0 +1,21 @@
+//Javascript Strings
+console.log("Javascript Strings")
+console.log("You can use double or single quotes to describe strings in js")
+console.log("Hi Rk")
+console.log('God , please make him realisaztion')
+//You can use quotes inside a string, as long as they don't match the quotes surrounding the string:\
+console.log("Work super hard , to achieve your 'goals'")
+console.log('"Success" is the key of hard work' )
+//To find the length of a string, use the built-in length property:
+let str="I_am_Shreya_Singh";
+console.log(str.length)
+//To write this kind of sentence- " It's alright" use blackslashes '\'
+console.log('It\'s albout time , when my time will come , than you will realize')
+//Strings can also be an object , using "new keyword" 
+
+let x="Success"
+console.log(x)
+let y= new String("Success")
+console.log(y)
+console.log(typeof(x)) //string
+console.log(typeof(y)) //Object
