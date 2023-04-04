@@ -51,3 +51,26 @@ let txt="I have achieved 20 LPA package ";
 let last_index =txt.lastIndexOf("package")
 console.log(last_index)
 console.log(txt.search(20))
+
+
+//JavaScript String Search
+//JavaScript String indexOf()
+let text ="Time will answer every questions";
+let index =text.indexOf("questions");
+console.log(index)
+
+//JavaScript String lastIndexOf()
+
+let txt="I have achieved 20 LPA package ";
+let last_index =txt.lastIndexOf("package")
+console.log(last_index)
+console.log(txt.search(20))
+
+//
+let lg_str ='Work Super hard , and achieve whatever you want';
+console.log(lg_str)
+
+let firstname ='Shreya ';
+let lastname='Singh'
+let fullname= `Welcome to the success party of sharpener ${firstname} ${lastname}`;
+console.log(fullname)
