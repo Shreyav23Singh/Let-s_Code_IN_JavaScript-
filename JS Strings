@@ -19,3 +19,22 @@ let y= new String("Success")
 console.log(y)
 console.log(typeof(x)) //string
 console.log(typeof(y)) //Object
+
+* * JavaScript String slice() * *
+slice() extracts a part of a string and returns the extracted part in a new string.
+
+The method takes 2 parameters: start position, and end position (end not included).
+
+==> let text ="Hard work,Persistence,consistency";
+let part=text.slice(10,21)
+console.log(part)
+console.log(part)
+
+==>let part1=text.slice(10)
+console.log(part1)
+
+==>let part2=text.slice(21)
+console.log(part)
+
+==>let part3=text.slice(-11)
+console.log(part3)
