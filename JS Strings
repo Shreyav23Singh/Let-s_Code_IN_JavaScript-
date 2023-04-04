@@ -38,3 +38,16 @@ console.log(part)
 
 ==>let part3=text.slice(-11)
 console.log(part3)
+
+//JavaScript String Search
+//JavaScript String indexOf()
+let text ="Time will answer every questions";
+let index =text.indexOf("questions");
+console.log(index)
+
+//JavaScript String lastIndexOf()
+
+let txt="I have achieved 20 LPA package ";
+let last_index =txt.lastIndexOf("package")
+console.log(last_index)
+console.log(txt.search(20))
