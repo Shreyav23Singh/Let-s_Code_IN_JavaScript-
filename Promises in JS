@@ -103,6 +103,21 @@ function(errormessage){
 * * Output *  *
 error
 
+Example5--------------------------------------------------------------------------------
+let p =new Promise((resolve , reject)=>{
+    reject("Promise rejected")
+})
+p.catch((error)=>{
+    console.log(error)
+})
+p.then((value)=>{
+    consolelog(value)
+})
+
+*  * Output *  *
+Promise Rejected
+
+
 
 
 
