@@ -1,0 +1,70 @@
+"I Promise a Result!"
+
+"Producing code" is code that can take some time
+
+"Consuming code" is code that must wait for the result
+
+A Promise is a JavaScript object that links producing code and consuming code
+
+Example 1 ==>
+let mypromise = new Promise(function(resolve , reject){
+    let x=0;
+    if(x==0){
+        resolve("true");
+    }else{
+        reject("error");
+    }
+});
+mypromise.then((value) =>{
+    console.log(value)
+})
+*  *  Output  *  *
+true
+
+Example 2==>-------------------------------------------------------------------------
+let p1 =new Promise((resolve , reject)=>{
+    console.log("promise is pending")
+    setTimeout(()=>{
+        resolve(true)
+    },2000)
+});
+let p2=new Promise((resolve , reject)=>{
+    console.log("Hey promise is pending")
+    settimeout(()=>{
+    reject(new Error("I am an error"))
+    },2000)
+});
+p1.then((value) =>{
+    console.log(value)
+})
+p2.catch((error) =>{
+    console.log("Some error occured")
+})
+
+*  *  Output *  *
+
+
+Example 3==>-------------------------------------------------------------------------
+let p= new Promise((resolve , reject)=>{
+    setTimeout(()=>{
+        resolve("I Love You !!");
+    },3000)
+    
+})
+p.then((value)=>{
+        console.log(value)
+    })
+let p2 =new Promise((resolve , reject)=>{
+    setTimeout(()=>{
+        reject(new Error("Hey , I am error"))
+    },5000)
+})
+p2.catch((error)=>{
+    console.log("some error occured")
+})
+Output * * * * * * * *
+I Love You !!
+some berror occured
+
+
+
