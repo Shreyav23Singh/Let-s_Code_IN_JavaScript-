@@ -17,7 +17,7 @@ It will pass a y , callback function into y. Than , it will excute x . Here , Ih
 So , here y will print . Than , setTimeout function executes 
 
 
-Question 2 ==>
+Question 2 ==>--------------------------------------------------------------------------------------------------------------------
 setTimeout(() => 
 console.log("timer") , 1000 )
 
@@ -33,3 +33,24 @@ Output
 inside x
 inside y
 timer
+
+Question 3=> --------------------------------------------------------------------------------------------------------
+setTimeout(() =>
+console.log("Sharpener Course") , 1000)
+setTimeout(() =>
+console.log("Job") , 0)
+
+function x(y){
+    console.log("Hello ji x ")
+    y();
+}
+x(function y(){
+    console.log("hii y")
+})
+
+
+Output
+Hello ji x 
+hii y
+Job
+Sharpener Course
