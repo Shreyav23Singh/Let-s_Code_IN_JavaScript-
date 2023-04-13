@@ -73,3 +73,19 @@ greet("Shreya" , callme);
 Output
 Hi Shreya
 I am a callback function
+
+Question 5=>-------------------------------------------------------------------------------------------------------
+//Program with setTimeout()
+function greet(){
+    console.log("Hello world");
+}
+function sayName(name){
+    console.log("hello " + name)
+    
+}
+setTimeout(greet ,2000)
+sayName("Piku")
+
+Output
+hello Piku
+Hello world
