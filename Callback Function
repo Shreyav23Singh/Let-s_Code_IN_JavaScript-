@@ -113,7 +113,7 @@ In the above program, the code is executed synchronously. The sayName() function
 
 The setTimeout() method executes the greet() function only after 2 seconds. However, the sayName() function waits for the execution of the greet() function.
 
-Question 7 => -----------------------------------------------------------------------------------------------------------------------------------------------
+Question 7 (sharpener assignment -	Creating a callback hell yourself )=> -----------------------------------------------------------------------------------------------------------------------------------------------
 function createdthirdpost(callBack){
     setTimeout( () => {
         console.log("Post Three")
