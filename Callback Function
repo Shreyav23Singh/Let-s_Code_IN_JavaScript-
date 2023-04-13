@@ -89,3 +89,19 @@ sayName("Piku")
 Output
 hello Piku
 Hello world
+
+Question 6=>-------------------------------------------------------------------------------------------------------
+//Program with setTimeout()
+function greet(name , myFunction){
+    console.log("Hello world");
+    myFunction(name);
+}
+function sayName(name){
+    console.log("hello " + name)
+    
+}
+setTimeout(greet ,2000 , 'Rakesh' , sayName)
+
+Output
+Hello world
+hello Rakesh
