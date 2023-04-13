@@ -88,5 +88,21 @@ p.catch((error)=>{
 *  *  Output *  *
 true
 
+Example4 -----------------------------------------------------------------------------------------
+let p=new Promise((resolve , reject)=>{
+    reject("promise rejected")
+})
+
+p.then(function(success){
+    console.log("success")
+},
+function(errormessage){
+    console.log("error")
+})
+
+* * Output *  *
+error
+
+
 
 
