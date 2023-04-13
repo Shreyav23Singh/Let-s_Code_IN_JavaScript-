@@ -66,5 +66,27 @@ Output * * * * * * * *
 I Love You !!
 some berror occured
 
+Example4---------------------------------------------------------------------------
+let p =new Promise((resolve , reject)=>{
+    let x="Success";
+    let y="Success";
+    if(x===y){
+        resolve("true");
+    }else{
+        reject("Not Same")
+    }
+})
+
+p.then((value)=>{
+    console.log(value)
+    
+})
+p.catch((error)=>{
+    console.log("some error occurred")
+})
+
+*  *  Output *  *
+true
+
 
 
