@@ -1,0 +1,17 @@
+Question 1 ==>
+setTimeout(function() {
+    console.log("Hey , Kiara ");
+} , 5000 );
+
+function x(y){ //Here x is a function and y ia an argument
+console.log("x");
+y();
+    
+}
+x(function y(){
+    console.log("y");
+});
+
+//Javascript will won't wait for setTimeout() function , it will move . If will see a function definition of x than it will try to call x functions. 
+It will pass a y , callback function into y. Than , it will excute x . Here , Ihave call y . So , here I have call y .
+So , here y will print . Than , setTimeout function executes 
