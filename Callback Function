@@ -1,3 +1,6 @@
+In javaScript , you can also pass a function as an argument to a function. This function that is passed as an argument inside of another function is called a 
+callback function.
+
 Question 1 ==>
 setTimeout(function() {
     console.log("Hey , Kiara ");
@@ -54,3 +57,19 @@ Hello ji x
 hii y
 Job
 Sharpener Course
+
+Question 4=>-------------------------------------------------------------------------------------------------------
+function greet(name , callback){ //function
+    console.log('Hi ' + name)
+    callback();
+}
+//callback function
+function callme(){
+    console.log("I am a callback function");
+}
+//passing function as an argument
+greet("Shreya" , callme);
+
+Output
+Hi Shreya
+I am a callback function
