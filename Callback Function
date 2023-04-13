@@ -91,6 +91,9 @@ hello Piku
 Hello world
 
 Question 6=>-------------------------------------------------------------------------------------------------------
+Example: Using a Callback Function
+In the above example, the second function does not wait for the first function to be complete. However, 
+if you want to wait for the result of the previous function call before the next statement is executed, you can use a callback function. For example,
 //Program with setTimeout()
 function greet(name , myFunction){
     console.log("Hello world");
@@ -105,3 +108,7 @@ setTimeout(greet ,2000 , 'Rakesh' , sayName)
 Output
 Hello world
 hello Rakesh
+
+In the above program, the code is executed synchronously. The sayName() function is passed as an argument to the greet() function.
+
+The setTimeout() method executes the greet() function only after 2 seconds. However, the sayName() function waits for the execution of the greet() function.
