@@ -117,6 +117,24 @@ p.then((value)=>{
 *  * Output *  *
 Promise Rejected
 
+Example 6 --------------------------------------------------------------------------------------
+const p =new Promise((resolve , reject)=>{
+    let condition=69;
+    if(condition<0){
+        resolve("Promise is resolved successfully and then() method will be called")
+    }else{
+        reject("Promise is rejected and catch() method will be called")
+    }
+});
+p.then((value)=>{
+    console.log(value)
+}).catch((error)=>{
+    console.log(error)
+})
+
+Output
+Promise is rejected and catch() method will be called
+
 
 
 
