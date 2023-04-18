@@ -64,3 +64,22 @@ If await is not used here than hello will print before the ' Promise resolved ' 
 The async function allows the asynchronous method to be executed in a seemingly synchronous way . Though the operation is asynchronous , it seems that the operation is 
 executed in synchronous manner .
 
+* * * * ** Error Handling ** * * * * 
+While using the async function, you write the code in a synchronous manner. And you can also use the catch() method to catch the error. For example,
+
+// * * * ERROR HANDLING * * *
+let p= new Promise(function(resolve , reject){
+    setTimeout(function(){
+        resolve('Promise Resolved')} , 4000);
+})
+async function async_func(){
+    try{
+        let result = await p ;
+        console.log(result);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+async_func();
+
