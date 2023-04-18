@@ -1,0 +1,56 @@
+we use the async keyword with a function to represent that the function is an asynchronous function .
+The async function returns a promise .
+
+==> Syntax <==
+async function function_name(para1 , para2 , ......,paran){
+//Statements
+}
+
+
+* * example 1 * *
+async function func_name(){
+    console.log('Async function ');
+    return Promise.resolve(1);
+}
+func_name();
+
+Output
+Async function 
+
+/ / Use of then() / / 
+* * Example 2 * * 
+async function func_name(){
+    console.log('Async function ');
+    return Promise.resolve(1);
+}
+func_name().then(function(result){
+    console.log(result)
+});
+
+Output
+Async function 
+1
+
+# # # # # Await Keyword # # # # #
+Await keyword is used inside the async function to wait for the asynchronous operation .
+Syntax
+let result = await promise ;
+
+* * Example 3 * *
+// a promise
+let p= new Promise(function(resolve , reject){
+    setTimeout(function(){
+        resolve('Promise resolved')},4000)
+});
+//async function
+async function asyncFunc(){
+    //wait until the promise resolves
+    let result = await p;
+    console.log(result);
+    console.log('hello');
+}
+asyncFunc();
+
+# # Output # # 
+Promise resolved
+hello
