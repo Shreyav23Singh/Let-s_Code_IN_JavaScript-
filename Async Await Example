@@ -93,3 +93,42 @@ Sure ! Why not ?
 Me :  let's go 
 Wait a sec , I wanna coffee than we will go 
 ticket
+
+* * * Promise.all() * *  * 
+console.log("Person1 :show ticket")
+console.log("Person2:show ticket")
+const preMovie = async ()=>{
+    const RK_Brings_ticket =new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve('ticket')
+        },3000)
+    })
+    const get_IceCream =new Promise((resolve , reject)=>{
+        resolve('Ice cream')
+    });
+    const get_Coffee =new Promise((resolve , reject)=>{
+        resolve('Coffee')
+    });
+    const get_Burger =new Promise((resolve , reject)=>{
+        resolve('Burger')
+    });
+    let ticket = await RK_Brings_ticket ;
+    let[IceCream  ,Coffee ,Burger] = await 
+    Promise.all([get_IceCream , get_Coffee, get_Burger])
+    console.log(`${IceCream } , ${Coffee} , ${Burger}`);
+    return ticket;
+    
+    
+    
+   
+}
+preMovie().then((m)=>console.log(m));
+console.log("Person4 :show ticket")
+console.log("Person5:show ticket")
+Output
+Person1 :show ticket
+Person2:show ticket
+Person4 :show ticket
+Person5:show ticket
+Ice cream , Coffee , Burger
+ticket
