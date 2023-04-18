@@ -60,3 +60,7 @@ function is written using the async function .
 The await keyword waits for the promise to be complete (i.e, resolve or reject ) . Here , hello is displayed only after promise value is available to the result variable .
 If await is not used here than hello will print before the ' Promise resolved ' .
 
+# #  # Why async function used ? # # #
+The async function allows the asynchronous method to be executed in a seemingly synchronous way . Though the operation is asynchronous , it seems that the operation is 
+executed in synchronous manner .
+
