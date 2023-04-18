@@ -42,5 +42,40 @@ Wait a sec , I wanna coffee than we will go
 
 
 ### So these things needs to be happen one after another ......here Async Await comes into picture
+console.log("Person4 :show ticket")
+console.log("Person5:show ticket")
+const preMovie = async ()=>{
+    const RK_Brings_ticket =new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve('ticket')
+        },3000)
+    })
+    const get_IceCream =new Promise((resolve , reject)=>{
+        resolve('Ice cream')
+    });
+    const get_Coffee =new Promise((resolve , reject)=>{
+        resolve('Coffee')
+    });
+    let ticket = await RK_Brings_ticket ;
+    console.log(`RK : I have the ${tickets}!`)
+    console.log("Rk : Let's go to watch first movie together")
+    console.log("Me : WAit I wanna eat something ")
+    Console.log(`RK : ${Icecream} ?`)
+    console.log("Me : yes")
+    
+    
+    let Icecream = await get_IceCream;
+    console.log("Will you buy for me")
+    console.log("Sure ! Why not ?")
+    
+    let coffee= await get_Coffee;
+    console.log("Me :  let's go ");
+    console.log("Wait a sec , I wanna coffee than we will go ");
+    return ticket;
+}
+preMovie().then((m)=>console.log(m));
+console.log("Person4 :show ticket")
+console.log("Person5:show ticket")
+
 
 
