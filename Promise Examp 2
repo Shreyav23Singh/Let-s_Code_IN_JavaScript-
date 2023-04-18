@@ -1,0 +1,24 @@
+Question ; Suppose you are going to watch movie and you forget to take movie ticket with you . And guess what , ticket will bring by RK . So that you have told to gatekeeper 
+that when he will come than , allow him to enter . 
+
+
+console.log("Person1 :Shows ticket")
+console.log("Person2 : shows ticket")
+let RK_Brings_ticket = new Promise((resolve , reject) =>{
+    setTimeout(()=>{
+        resolve('ticket');
+    },3000)
+});
+RK_Brings_ticket.then((t)=>{
+    console.log("Person3 : shows ticket")
+})
+console.log("Person5 : shows ticket")
+console.log("Person4 : shows ticket")
+
+Output
+Person1 :Shows ticket
+Person2 : shows ticket
+Person5 : shows ticket
+Person4 : shows ticket
+Person3 : shows ticket
+
