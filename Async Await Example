@@ -1,0 +1,29 @@
+console.log("Person1 :Shows ticket")
+console.log("Person2 : shows ticket")
+let RK_Brings_ticket = new Promise((resolve , reject) =>{
+    setTimeout(()=>{
+        resolve('ticket');
+    },3000)
+});
+
+//When RK brings ticket 
+let get_IceCream = RK_Brings_ticket.then((t)=>{
+    console.log("RK : Let's go to watch first movie together")
+    console.log("Me : Wait , I wanna ICECREAM ")
+    console.log("Will you buy for me")
+    console.log("Sure ! Why not ?")
+    return new Promise((resolve , reject)=>{`${t} Icecream`})
+});
+
+let get_Coffee =get_IceCream.then((t)=>{
+    console.log("Me :  let's go ");
+    console.log("Wait a sec , I wanna coffee than we will go ");
+    return new Promise((resolve , reject)=>{ `${t} Coffee`})
+});
+
+get_Coffee.then((t)=>console.log(t));
+console.log("Person5 : shows ticket")
+console.log("Person4 : shows ticket")
+
+
+Output
