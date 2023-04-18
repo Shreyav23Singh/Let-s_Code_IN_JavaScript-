@@ -54,3 +54,9 @@ asyncFunc();
 # # Output # # 
 Promise resolved
 hello
+
+Explanation - In the avove program , a promise object is created and it gets resolved after 4000 milliseconds .Here the async function is written using  ' asyncfunc() '
+function is written using the async function . 
+The await keyword waits for the promise to be complete (i.e, resolve or reject ) . Here , hello is displayed only after promise value is available to the result variable .
+If await is not used here than hello will print before the ' Promise resolved ' .
+
