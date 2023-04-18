@@ -106,4 +106,50 @@ console.log("Welcome to weather control room")
 harry()
 
 
+-------------------------------------------------------------* * *  * * * * *  * * * * -----------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async_Function</title>
+</head>
+<body>
+    async function async_function1(){
+    let delhiweather = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve("27 Deg")
+        },2000)
+       
+    })
+    let bangaloreweather =new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve("21 Deg")
+        },5000)
+    })
+
+    console.log("Fetching Delhi weather  Please wait.....");
+    let delhiW = await delhiweather;
+    console.log("Fetched Delhi Weather :" +delhiW)
+    console.log("Fetching Bangalore weather Please Wait .....");
+    let BangaloreW = await bangaloreweather;
+    console.log("Fetched Bangalore Weather :"+BangaloreW);
+    return [delhiW , BangaloreW];
+
+}
+const cherry =()=>{
+    console.log("hey I am cherry and I am not waiting ")
+}
+console.log("Welcome to weather control room")
+let a =harry()
+let b=cherry()
+a.then((value)=>{
+    console.log(value)
+})
+</body>
+</html>
+
+
+
 
