@@ -1,3 +1,5 @@
+* * Example of Promises * *
+
 console.log("Person1 :Shows ticket")
 console.log("Person2 : shows ticket")
 let RK_Brings_ticket = new Promise((resolve , reject) =>{
