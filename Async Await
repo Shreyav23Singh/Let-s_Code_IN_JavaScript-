@@ -83,3 +83,27 @@ async function async_func(){
 }
 async_func();
 
+
+* * # # # # Example - weather control room  # # # #  * *
+async function harry(){
+    let delhiweather =new Promise((resolve ,reject)=>{
+        
+        setTimeout(()=>{
+            resolve("27  Deg")
+        },2000)
+    })
+    let bangaloreWeather =new Promise((resolve , reject)=>{
+        
+        setTimeout(()=>{
+            resolve("21 Deg")
+        },5000)
+    })
+    delhiweather.then(alert)
+    bangaloreWeather.then(alert)
+}
+console.log("Welcome to weather control room")
+
+harry()
+
+
+
