@@ -57,3 +57,44 @@ Rk : OK!
  Rk : Let's have some butter also with popcorn
 Me : PLease Bring one cold drink for me
 undefined
+
+
+-----------------------------------------------Promise.all() - Example ------------------------------------------------
+console.log("Person 1 : Show Ticket")
+console.log("Person 2 : Show Ticket")
+const ticketChecking =async ()=>{
+    const movie = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve('checking')
+        }, 3000)
+    })
+       const  getPopCorn =new Promise((resolve , reject)=>{
+        resolve('PopCorn')
+    })
+       const  getButer =new Promise((resolve , reject)=>{
+        resolve('Butter')
+    })
+    const  getColdDrinks =new Promise((resolve , reject)=>{
+        resolve('colddrinks')
+    })
+    let check_ticket =await ticketChecking;
+    let[popcorn , butter , colddrink] =await
+    Promise.all([getPopCorn , getButer , getColdDrinks])
+    console.log(`${popcorn} ,${butter} ,${colddrink} `)
+    return check_ticket ;
+    
+}
+ticketChecking().then((m)=>console.log(m))
+console.log("Person 4 : show Ticket")
+console.log("Person 5 : show Ticket")
+
+
+Output
+node /tmp/XW1jcEQcZ0.js
+Person 1 : Show Ticket
+Person 2 : Show Ticket
+Person 4 : show Ticket
+Person 5 : show Ticket
+PopCorn ,Butter ,colddrinks 
+[AsyncFunction: ticketChecking]
+
