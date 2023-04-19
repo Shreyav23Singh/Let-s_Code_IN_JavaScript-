@@ -1,3 +1,6 @@
+Question ==> Now create a new promise called getColdDrinks which come after husband gets butter. Integrate the code in both async and await and also promises' code
+
+
 console.log("Person 1 : Show Ticket")
 console.log("Person 2 : Show Ticket")
 const ticketChecking =async ()=>{
