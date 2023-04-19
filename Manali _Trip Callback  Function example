@@ -1,0 +1,35 @@
+function buycar(cb1 , cb2 , cb3){
+    setTimeout(()=>{
+        console.log("Buy Fortuner")
+        cb1(cb2 , cb3);
+        
+    },10000)
+}
+function PlanAtrip(cb1 , cb2 ){
+    setTimeout(()=>{
+        console.log("Let's go to Manali")
+        cb1(cb2 );
+        
+    },2000)
+}
+function reachedManali(cb ){
+    setTimeout(()=>{
+        console.log("Reached Manali")
+        cb();
+        
+    },1000)
+}
+function visit_fam_Mountain( ){
+    setTimeout(()=>{
+        console.log("Reached Lovely Mountaion")
+       
+        
+    },1000)
+}
+buycar(PlanAtrip ,reachedManali ,  visit_fam_Mountain)
+
+Output * * * * * 
+Buy Fortuner
+Let's go to Manali
+Reached Manali
+Reache Lovely Mountaion
