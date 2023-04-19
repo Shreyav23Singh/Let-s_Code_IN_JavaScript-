@@ -1,0 +1,56 @@
+console.log("Person 1 : Show Ticket")
+console.log("Person 2 : Show Ticket")
+const ticketChecking =async ()=>{
+    const movie = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve('checking')
+        }, 3000)
+    })
+       const  getPopCorn =new Promise((resolve , reject)=>{
+        resolve('PopCorn')
+    })
+       const  getButer =new Promise((resolve , reject)=>{
+        resolve('Butter')
+    })
+    const  getColdDrinks =new Promise((resolve , reject)=>{
+        resolve('colddrinks')
+    })
+    let checkticket =await movie;
+    console.log(" Guard : Show me Your Ticket")
+    console.log("Me : Sorry I have only one ticket , I forgot to bring ticket of rk")
+    console.log("Guard : when he will come , I will allow him . AS nof now , you can come")
+    console.log("Rk : Hey , I am there")
+    let popcorn =await getPopCorn;
+    console.log("Rk : Let's go")
+    console.log("Me : I wanna popCorn" )
+    console.log("Rk : OK!")
+    
+    
+    let butter = await getButer;
+    console.log(" Rk : Let's have some butter also with popcorn")
+    
+    let drink =await getColdDrinks ;
+    console.log("Me : PLease Bring one cold drink for me")
+    
+}
+ticketChecking().then((m)=>console.log(m))
+console.log("Person 4 : show Ticket")
+console.log("Person 5 : show Ticket")
+
+
+Output
+node /tmp/XW1jcEQcZ0.js
+Person 1 : Show Ticket
+Person 2 : Show Ticket
+Person 4 : show Ticket
+Person 5 : show Ticket
+Guard : Show me Your Ticket
+Me : Sorry I have only one ticket , I forgot to bring ticket of rk
+Guard : when he will come , I will allow him . AS nof now , you can come
+Rk : Hey , I am there
+Rk : Let's go
+Me : I wanna popCorn
+Rk : OK!
+ Rk : Let's have some butter also with popcorn
+Me : PLease Bring one cold drink for me
+undefined
