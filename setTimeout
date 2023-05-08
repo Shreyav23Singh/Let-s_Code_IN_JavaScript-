@@ -1,0 +1,14 @@
+Q1.
+setTimeout(()=> console.log('timer expired ') , 1000 )
+
+function x(y){
+    console.log('Inside x')
+    y();
+}
+x(function y(){
+    console.log('Inside y')
+})
+Output
+Inside x
+Inside y
+timer expired 
