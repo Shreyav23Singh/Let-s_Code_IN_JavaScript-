@@ -1,0 +1,36 @@
+console.log("Question 1")
+const numbers=[1,2,3,4];
+const nums =numbers.map( nums =>{
+    return nums*23;
+})
+console.log(numbers)
+console.log(nums)
+
+
+console.log("Question 2")
+const n1=[10,20,30,40];
+const n2=n1.map((divide_num) =>{
+    return divide_num/10;
+    
+})
+console.log(n2)
+
+
+console.log("Question 3")
+
+const people=[
+    {name : 'Shreya' , age :24},
+    {name : 'Piku' , age:23},
+    {name :'Rakesh' , age:24}];
+    const names =people.map(person=>person.name)
+    console.log(names)
+    
+  * * * * *   Output  * * * * * 
+    node /tmp/CfQHx8hyV9.js
+Question 1
+[ 1, 2, 3, 4 ]
+[ 23, 46, 69, 92 ]
+Question 2
+[ 1, 2, 3, 4 ]
+Question 3
+[ 'Shreya', 'Piku', 'Rakesh' ]
