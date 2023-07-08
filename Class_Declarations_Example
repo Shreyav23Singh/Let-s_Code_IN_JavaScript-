@@ -18,3 +18,24 @@ Output
 node /tmp/5bl33J28ZN.js
 My id is 123 ,  I am Shreya Singh, my designation is Software Engineer and my dream  is to become Rich.
 My id is 4563 ,  I am Prachi Singh, my designation is  Frontend Developer and my dream  is to become Big.
+
+-------------------------------------------------------------------------------- Program 2 -------------------------------------------------------------
+class Company{
+    constructor(id , Department ){
+        this.id=id;
+        this.Department =Department;
+    }
+    details(){
+        console.log("My id is " + this.id + "  and my destination is " + this.Department );
+    }
+    
+}
+var e1=new Company("c1" , "Software Engineer");
+var e2=new Company("c2" , "Frontend Developer");
+e1.details();
+e2.details();
+
+
+Output
+My id is c1  and my destination is Software Engineer
+My id is c2  and my destination is Frontend Developer
