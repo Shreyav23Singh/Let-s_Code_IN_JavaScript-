@@ -1,1 +1,20 @@
+class Employee{
+    constructor(id , name , designation , dream){ //constructor
+        this.id=id;
+        this.name=name;
+        this.designation=designation;
+        this.dream=dream;
+    }
+    display(){ //method
+        console.log("My id is " +  this.id +  " ,  I am " +  this.name  + ", my designation is " + this.designation + " and my dream  is to become "+ this.dream +".");
+    }
+}
+    var e1=new Employee("123" , "Shreya Singh" , "Software Engineer" , "Rich");
+    var e2=new Employee("4563" , "Prachi Singh" , " Frontend Developer" , "Big");
+    e1.display();
+    e2.display();
 
+Output
+node /tmp/5bl33J28ZN.js
+My id is 123 ,  I am Shreya Singh, my designation is Software Engineer and my dream  is to become Rich.
+My id is 4563 ,  I am Prachi Singh, my designation is  Frontend Developer and my dream  is to become Big.
