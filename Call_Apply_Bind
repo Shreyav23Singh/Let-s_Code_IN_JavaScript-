@@ -31,3 +31,47 @@ participant1.ChargeBattery.call(participant2);
 console.log(participant2);
 
 
+***********************************      Example of call() method        ********************************
+var emp1 ={
+    firstname : 'Shreya',
+    lastname : 'Singh'
+}
+var emp2  ={
+    firstname:'Rakesh',
+    lastname:'Singh',
+}
+function invite(profession1 , profession2){
+    console.log(this.firstname + " " +  this.lastname + " profession is " + profession1);
+    
+    
+}
+invite.call(emp1 ,"Frontend Developer");
+invite.call(emp2 ,"Backend Developer");
+
+Output
+node /tmp/8Ck8kDx5EZ.js
+Shreya Singh profession is Frontend Developer
+Rakesh Singh profession is Backend Developer
+
+* * * * * * * * * * * * * * * * * * * * *  * * *   Apply method() * * * * *  * * * * * * * * * * * * *
+var emp1 ={
+    firstname : 'Shreya',
+    lastname : 'Singh'
+}
+var emp2  ={
+    firstname:'Rakesh',
+    lastname:'Singh',
+}
+function invite(profession1 , profession2){
+    console.log(this.firstname + " " +  this.lastname + " profession is " + profession1);
+    
+    
+}
+invite.apply(emp1 ,['Frontend Developer']);
+invite.apply(emp2 ,['Backend Developer']);
+
+Output
+node /tmp/8Ck8kDx5EZ.js
+Shreya Singh profession is Frontend Developer
+Rakesh Singh profession is Backend Developer
+
