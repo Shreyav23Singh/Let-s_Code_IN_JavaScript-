@@ -1,1 +1,58 @@
 
+1. Explain the execution context.
+🅰️🔶Execution context is the context for describing the internal working of a code.
+🔶In JavaScript, the environment that enables the JavaScript code to get executed is what we call JavaScript Execution Context.
+🔶It is the execution context that describes which code section has access to the functions, variables, and objects used in the code.
+🔶During the execution context, the specific code gets parsed line by line then variables and functions are stored in the memory.
+🔶An execution context is similar to a container that stores variables, and the code gets evaluated and then executed.
+
+2️⃣ How many types of execution contexts are there?
+🅰️ There are 3️⃣ types of execution contexts are there-
+🔹Global Execution Context(GEC)
+🔹Functional Execution Context(FEC)
+🔹Eval Execution Context(EEC)
+
+3️⃣ Briefly describe the types of execution context.
+🅰️💥Global Execution Context:
+  - The global execution context represents the code that is not inside any function. It is created when your script is executed.
+  - Variables and functions declared globally are part of the global context.
+🧨
+  var globalVar = 'I am global';
+  function globalFunction() {
+   console.log('Hello from global function');
+  }
+  globalFunction(); // Output: Hello from global function
+ 
+
+💥 Function Execution Context:
+  - When a function is called, a new function execution context is created.
+  - The local variables and parameters of the function are stored in this context.
+
+  // FEC
+  function exampleFunction(param1, param2) {
+   var localVar = 'I am local';
+
+   console.log(globalVar); // Accessing global variable
+   console.log(localVar); // Accessing local variable
+   console.log(param1);  // Accessing function parameter
+
+   // Nested function call
+   function nestedFunction() {
+    console.log('I am nested function');
+   }
+
+   nestedFunction();
+  }
+
+  exampleFunction('Param1 Value', 'Param2 Value');
+ 
+
+3️⃣💥Eval Execution Context:
+  - The `eval` function in JavaScript can be used to execute code dynamically.
+  - When `eval` is used, it creates a new execution context.
+
+
+  // EEC
+  var evalCode = 'console.log("I am from eval")';
+
+  eval(evalCode); // Output: I am from eval
