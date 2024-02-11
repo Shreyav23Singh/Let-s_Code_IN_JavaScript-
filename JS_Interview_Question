@@ -56,3 +56,49 @@
   var evalCode = 'console.log("I am from eval")';
 
   eval(evalCode); // Output: I am from eval
+
+👉1️⃣ . What is the Call Stack in JavaScript?
+🅰️•The call stack is a crucial concept in JavaScript’s runtime environment, representing the mechanism by which the JavaScript engine keeps track of function calls in a program. It operates as a Last In, First Out (LIFO) data structure, meaning that the last function called is the first one to be resolved.
+•A call stack is also known as an 'Execution Context Stack', 'Runtime Stack ', or 'Machine stack'.
+✨✨
+👉2️⃣. What is the mechanism of the call stack in JavaScript?
+🅰️ The call stack is a mechanism that keeps track of the function calls in your code. It follows the Last In, First Out (LIFO) principle, meaning that the last function that gets added to the stack is the first one to be executed and removed.
+Step-by-step process of how the call stack works in JavaScript:
+🧨Function Invocation:
+• When a script starts running, the global execution context is created, and its associated function (usually the global scope or the top-level code) is pushed onto the call stack.
+• When a function is called, a new function execution context is created for that function, and it is pushed onto the call stack.
+🧨Execution:
+•The function at the top of the call stack is the one currently being executed. •The JavaScript engine executes its code line by line.
+🧨Function Completion:
+•When the function completes its execution, its execution context is popped off the call stack, and control returns to the calling function.
+•If there are any values to be returned, they are passed back to the calling function.
+🧨Recursive Calls:
+•If a function calls itself (recursive call), a new function execution context is created for each recursive call and added to the call stack.
+•The recursive calls continue until a base case is reached, and then the functions start to complete and pop off the stack.
+At last, when the execution of the entire code is completed, the JS engine removes the GEC from the current stack.
+✨Your Task : Do solve by yourself✨
+👉3️⃣ Briefly explain the concept of call stack with the help of code.
+function add(x, y) {
+ return x + y;
+}
+
+function multiply(a, b) {
+ return a * b;
+}
+
+function calculate() {
+ const result1 = add(2, 3);
+ const result2 = multiply(result1, 4);
+ return result2;
+}
+
+const finalResult = calculate();
+console.log(finalResult);
+
+Ans : calculate is called and pushed onto the stack.
+Inside calculate, add is called and pushed onto the stack.
+add completes, pops off the stack, and returns to calculate.
+Inside calculate, multiply is called and pushed onto the stack.
+multiply completes, pops off the stack, and returns to calculate.
+calculate completes, pops off the stack.
+The final result is logged to the console.
